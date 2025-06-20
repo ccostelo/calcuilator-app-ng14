@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="calculatorApp">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculator App</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="lib/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="calculator.controller.js"></script>
+</head>
+<body ng-controller="CalculatorController">
+  <div class="calculator">
+    <h1>Calculator</h1>
+
+    <input type="number" ng-model="a" placeholder="Number a" />
+    <input type="number" ng-model="b" placeholder="Number b" />
+    <br />
+
+    <button ng-click="add()">Add</button>
+    <button ng-click="subtract()">Subtract</button>
+    <button ng-click="multiply()">Multiply</button>
+    <button ng-click="divide()">Divide</button>
+
+    <p class="result" ng-bind="result"></p>
+  </div>
+</body>
+</html>
